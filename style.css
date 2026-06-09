@@ -1,19 +1,38 @@
-// 1. Seleciona o botão e o corpo da página no HTML
-const botao = document.getElementById('meuBotao');
-const corpoPagina = document.body;
-
-// 2. Função para gerar uma cor hexadecimal aleatória (ex: #FFA07A)
-function gerarCorAleatoria() {
-    const letras = '0123456789ABCDEF';
-    let cor = '#';
-    for (let i = 0; i < 6; i++) {
-        cor += letras[Math.floor(Math.random() * 16)];
-    }
-    return cor;
+/* Configuração geral do corpo da página */ CSS
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease; /* Efeito suave ao mudar de cor */
 }
 
-// 3. Adiciona o evento de clique ao botão
-botao.addEventListener('click', () => {
-    const novaCor = gerarCorAleatoria();
-    corpoPagina.style.backgroundColor = novaCor;
-});
+/* Caixa que centraliza o conteúdo */
+.conteudo {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do botão */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Efeito ao passar o mouse pelo botão */
+button:hover {
+    background-color: #0056b3;
+}
